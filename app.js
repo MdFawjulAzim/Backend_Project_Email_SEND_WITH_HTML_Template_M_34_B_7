@@ -7,19 +7,14 @@ import router from "./routes/api.js";
 
 import {
     PORT,
-    DATABASE,
     WEB_CACHE,
     MAX_JSON_SIZE,
     URL_ENCODE,
     REQUEST_TIME,
     REQUEST_NUMBER
 } from "./app/config/config.js";
-import TrafficMiddleware from './app/middlewares/TrafficMiddleware.js';
 
 const app = express();
-
-// set web Traffic
-TrafficMiddleware(app);
 
 //Global Application Middleware
 app.use(cors());
